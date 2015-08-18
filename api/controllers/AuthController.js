@@ -10,6 +10,19 @@ module.exports = {
     },
 
     login: function(req, res) {
+      sails.hooks.email.send(
+        "testEmail",
+        {
+          recipientName: "Joe",
+          senderName: "Sue"
+        },
+        {
+          to: "joe@example.com",
+          subject: "Hi there"
+        },
+        function(err) {console.log(err || "It worked!");}
+      );
+
       var email = req.body.email;
       var password = req.body.password;
 

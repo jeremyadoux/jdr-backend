@@ -27,7 +27,8 @@
     "passport-local": "~1.0.0",
     "sails-mongo": "~0.10.8" ,
     "passport-http-bearer": "latest",
-    "clone" : "latest"
+    "clone" : "latest",
+    "sails-hook-email" : "latest"
   },
   "scripts": {
     "debug": "node debug app.js",
